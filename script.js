@@ -72,3 +72,18 @@ paperButton.addEventListener('click', function() {
         }
     }
 });
+// Player chooses scissor
+scissorButton.addEventListener('click', function() {
+    if (gameActive) {
+        const computer = getRandomComputer();
+        if (computer == "paper") {
+            playerScore += 1; // Player wins
+        } else if (computer == "rock") {
+            computerScore += 1; // Computer wins
+        }
+    }
+    // Update scores on UI
+    pScore.textContent = playerScore;
+    cScore.textContent = computerScore;
+});
+
