@@ -61,6 +61,10 @@ h1 {
     color: white;
     transform: translateY(-2px);
 }
+.RPS-selection button:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+}
 
 /* RPS Game Buttons */
 .RPS-selection {
@@ -154,4 +158,57 @@ h1 {
     background: #48bb78;
     color: white;
     transform: translateY(-2px);
+}
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 15px;
+    }
+    
+    h1 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .round-selection {
+        padding: 20px;
+        margin: 30px 0;
+    }
+    
+    .round-selection button {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        padding: 16px;
+    }
+    
+    .RPS-selection {
+        padding: 30px 20px;
+        margin: 30px 0;
+    }
+    
+    .RPS-selection button {
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+        padding: 20px;
+        font-size: 16px;
+    }
+    
+    .score {
+        padding: 20px;
+        font-size: 18px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    #result-message {
+        font-size: 20px;
+        margin: 20px 0;
+    }
+    
+    #restart {
+        width: 100%;
+        padding: 16px;
+    }
 }
