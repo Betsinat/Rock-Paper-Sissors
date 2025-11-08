@@ -3,85 +3,155 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: #0f1419;
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
     min-height: 100vh;
-    color: white;
+    color: #e2e8f0;
+    line-height: 1.6;
 }
+
 h1 {
-    font-size: 40px;
-    margin: 20px 0;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    color: #f7fafc;
+    letter-spacing: -0.5px;
 }
-.round-selection button {
-    background: #ff6b6b;
-    padding: 12px 24px;
-    border-radius: 8px;
+
+/* Round Selection */
+.round-selection {
+    margin: 40px 0;
+    padding: 30px;
+    background: #1a202c;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #2d3748;
+}
+
+.round-selection h2 {
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #cbd5e0;
     font-size: 18px;
-    margin: 0 10px;
-    border: none;
-    color: white;
+}
+
+.round-selection button {
+    background: #2d3748;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    margin: 0 12px;
+    border: 1px solid #4a5568;
+    color: #e2e8f0;
     cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
 }
+
 .round-selection button:hover {
-    background: #ff5252;
-    transform: scale(1.05);
+    background: #667eea;
+    border-color: #667eea;
+    color: white;
+    transform: translateY(-2px);
 }
+
+/* RPS Game Buttons */
 .RPS-selection {
     margin: 40px 0;
+    padding: 40px 30px;
+    background: #1a202c;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #2d3748;
 }
 
 .RPS-selection h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-}
-.RPS-selection button {
-    background: #4ecdc4;
-    padding: 20px 30px;
-    border-radius: 50%;
-    font-size: 20px;
-    margin: 0 15px;
-    border: none;
-    color: white;
-    cursor: pointer;
-    width: 100px;
-    height: 100px;
-}
-.RPS-selection button:hover {
-    background: #45b7af;
-    transform: scale(1.1);
+    margin-bottom: 30px;
+    font-weight: 500;
+    color: #cbd5e0;
+    font-size: 18px;
 }
 
+.RPS-selection button {
+    background: #2d3748;
+    padding: 25px;
+    border-radius: 12px;
+    font-size: 18px;
+    margin: 0 10px;
+    border: 1px solid #4a5568;
+    color: #e2e8f0;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 120px;
+    height: 120px;
+}
+
+.RPS-selection button:hover {
+    background: #667eea;
+    border-color: #667eea;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+}
+
+/* Score Display */
 .score {
-    font-size: 22px;
-    margin: 20px 0;
+    font-size: 20px;
+    margin: 30px 0;
+    padding: 25px;
+    background: #1a202c;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #2d3748;
 }
 
 .score p {
-    margin: 10px 0;
+    margin: 0;
+    font-weight: 500;
+    color: #cbd5e0;
 }
+
+/* Result Message */
 #result-message {
-    font-size: 28px;
+    font-size: 24px;
     margin: 30px 0;
-    font-weight: bold;
+    font-weight: 400;
+    color: #f7fafc;
     min-height: 40px;
 }
 
+/* Restart Button */
 #restart {
-    background: #ffe66d;
-    padding: 15px 30px;
+    background: #2d3748;
+    padding: 14px 32px;
     border-radius: 8px;
-    font-size: 18px;
-    border: none;
-    color: #333;
+    font-size: 16px;
+    border: 1px solid #48bb78;
+    color: #48bb78;
     cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
     margin-top: 20px;
 }
 
 #restart:hover {
-    background: #ffdc4d;
-    transform: scale(1.05);
+    background: #48bb78;
+    color: white;
+    transform: translateY(-2px);
 }
