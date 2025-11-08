@@ -37,23 +37,36 @@ rockButton.addEventListener('click', function() {
     if (gameActive) {
         const computer = getRandomComputer();
         if (computer == "paper") {
-            computerScore += 1; // Computer wins
+            computerScore += 1; 
         } else if (computer == "scissor") {
-            playerScore += 1; // Player wins
+            playerScore += 1; 
         }
     }
+     currentRound += 1; // Increment round
     // Update scores on UI
     pScore.textContent = playerScore;
     cScore.textContent = computerScore;
+    // This should be inside each button's click handler, after updating scores:
+if(currentRound >= totalRounds) {
+    gameActive = false;
+    if (playerScore > computerScore) {
+        resultMessage.textContent = "Player wins!"
+    } else if (computerScore > playerScore) {
+        resultMessage.textContent = "Computer wins!"
+       
+    } else {
+        resultMessage.textContent = "It's a tie!"
+    }
+}
 });
 // Player chooses paper
 paperButton.addEventListener('click', function() {
     if (gameActive) {
         const computer = getRandomComputer();
         if (computer == "rock") {
-            playerScore += 1; // Player wins
+            playerScore += 1; 
         } else if (computer == "scissor") {
-            computerScore += 1; // Computer wins
+            computerScore += 1; 
         }
     }
 
@@ -61,29 +74,55 @@ paperButton.addEventListener('click', function() {
     // Update scores on UI
     pScore.textContent = playerScore;
     cScore.textContent = computerScore;
-
     // End game if total rounds reached
-    if(currentRound >= totalRounds) {
-        gameActive = false;
-        if (playerScore > computerScore) {
-            console.log("Player wins");
-        } else {
-            console.log("Computer wins");
-        }
+if(currentRound >= totalRounds) {
+    gameActive = false;
+    if (playerScore > computerScore) {
+        resultMessage.textContent = "Player wins!"
+    } else if (computerScore > playerScore) {
+        resultMessage.textContent = "Computer wins!"
+       
+    } else {
+        resultMessage.textContent = "It's a tie!"
     }
+}
 });
 // Player chooses scissor
 scissorButton.addEventListener('click', function() {
     if (gameActive) {
         const computer = getRandomComputer();
         if (computer == "paper") {
-            playerScore += 1; // Player wins
+            playerScore += 1; 
         } else if (computer == "rock") {
-            computerScore += 1; // Computer wins
+            computerScore += 1; 
         }
     }
+     currentRound += 1; // Increment round
     // Update scores on UI
     pScore.textContent = playerScore;
     cScore.textContent = computerScore;
+    // End game if total rounds reached
+if(currentRound >= totalRounds) {
+    gameActive = false;
+    if (playerScore > computerScore) {
+        resultMessage.textContent = "Player wins!"
+    } else if (computerScore > playerScore) {
+        resultMessage.textContent = "Computer wins!"
+       
+    } else {
+        resultMessage.textContent = "It's a tie!"
+    }
+}
 });
+restart.addEventListener('click' , function(){
+    playerScore = 0;
+    computerScore = 0;
+    currentRound = 0;
+    totalRounds = 0;
+    gameActive = false;
+    pScore.textContent = "0";
+    cScore.textContent = "0";
+    resultMessage.textContent = "Choose your weapon!";
+})
 
+  
