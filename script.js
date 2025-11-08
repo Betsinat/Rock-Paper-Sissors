@@ -25,3 +25,10 @@ round7Button.addEventListener('click', function() {
     totalRounds = 7;
     gameActive = true;
 });
+// Generate random choice for computer
+function getRandomComputer() {
+    const random = Math.floor(Math.random() * 3);
+    if (random === 0) return "rock";
+    if (random === 1) return "paper";
+    return "scissor";
+}
