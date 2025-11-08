@@ -32,3 +32,17 @@ function getRandomComputer() {
     if (random === 1) return "paper";
     return "scissor";
 }
+// Player chooses rock
+rockButton.addEventListener('click', function() {
+    if (gameActive) {
+        const computer = getRandomComputer();
+        if (computer == "paper") {
+            computerScore += 1; // Computer wins
+        } else if (computer == "scissor") {
+            playerScore += 1; // Player wins
+        }
+    }
+    // Update scores on UI
+    pScore.textContent = playerScore;
+    cScore.textContent = computerScore;
+});
