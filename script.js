@@ -15,3 +15,13 @@ let pScore = document.getElementById('player-score');
 let cScore = document.getElementById('computer-score');
 let resultMessage = document.getElementById('result-message');
 const restart = document.getElementById('restart');
+// Set total rounds and start game when player selects 5 or 7 rounds
+round5Button.addEventListener('click', function() {
+    totalRounds = 5;
+    gameActive = true;
+});
+
+round7Button.addEventListener('click', function() {
+    totalRounds = 7;
+    gameActive = true;
+});
