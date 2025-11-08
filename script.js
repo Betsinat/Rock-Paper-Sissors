@@ -46,3 +46,29 @@ rockButton.addEventListener('click', function() {
     pScore.textContent = playerScore;
     cScore.textContent = computerScore;
 });
+// Player chooses paper
+paperButton.addEventListener('click', function() {
+    if (gameActive) {
+        const computer = getRandomComputer();
+        if (computer == "rock") {
+            playerScore += 1; // Player wins
+        } else if (computer == "scissor") {
+            computerScore += 1; // Computer wins
+        }
+    }
+
+    currentRound += 1; // Increment round
+    // Update scores on UI
+    pScore.textContent = playerScore;
+    cScore.textContent = computerScore;
+
+    // End game if total rounds reached
+    if(currentRound >= totalRounds) {
+        gameActive = false;
+        if (playerScore > computerScore) {
+            console.log("Player wins");
+        } else {
+            console.log("Computer wins");
+        }
+    }
+});
